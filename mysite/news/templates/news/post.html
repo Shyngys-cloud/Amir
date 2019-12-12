@@ -1,0 +1,10 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+{% block content %}
+ <h2 class="text-info" align="center">{{articles.title}}</h2>
+ <h6 class="text-info" align="center">Posted : {{articles.date|date:"Y-m-d в H:i:s" }}</h6>
+ <p> <a style="color:#000080"><big><big><big>{{articles.post|safe|linebreaks}}</big></big></big></a></p>
+ {% endblock %}

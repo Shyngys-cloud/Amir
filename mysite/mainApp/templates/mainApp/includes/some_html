@@ -1,0 +1,48 @@
+{% block content %}
+<div class="top-bar"  style="background: url(static/mainApp/image/2.jpeg)no-repeat fixed center"  >
+<section class="top-bar-section">
+ <ul class="rigth">
+   {% if username %}
+     <li>&nbsp;&nbsp;<a href="/auto/logout/" class="btn btn-dark btn-lg" >Logout({{ username }})</a></li>
+   {% else %}
+     <li>&nbsp;&nbsp;<a href="/auto/login/" class="btn btn-primary btn-lg" > login</a></li>
+   {% endif %}
+ </ul>
+ </section>
+  <div class="container" >
+    <h> <big><big><big><b><i style="color:#FFFFFF">Добро пожаловать !</i></b>
+    </h>
+    <p></p>
+    <p> <b><i style="color:#FFFFFF">Чтобы продолжить нажмите на кнопку</big></big></big></b></i></p>
+    <a></a>
+    <p>
+     <a href="/" class="btn btn-success btn-lg" > Main Page</a>
+     <a href="/news" class="btn btn-warning btn-lg">Salles &raquo;</a>
+     <a href="/contact" class="btn btn-info btn-lg">Contact </a>
+     <form class="form-inline my-2 my-lg-0">
+     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+     <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+   </form>
+    </p>
+    &nbsp;&nbsp;&nbsp;
+  </div>
+</div>
+<body style="background: url(static/mainApp/image/11.jpeg)">
+  <p align="center"><big><big><big><big><strong><i style="color:#FFFFFF">Sections</i></strong></big></big></big></big></p>
+  <p>
+    <a href="/Bread_and_pastries" class="btn btn-outline-primary btn-lg">Bread and pastries</a>
+    <a href="/Dairy_products_and_eggs" class="btn btn-outline-secondary btn-lg">Dairy products and eggs</a>
+    <a href="/Fish_seafood_caviar" class="btn btn-outline-success btn-lg">Fish seafood caviar</a>
+    <a href="/Breakfast_cereals_cereal_muesli" class="btn btn-outline-danger btn-lg">Breakfast cereals, cereal, muesli</a>
+  </p>
+  <p>
+    <a href="/Vegetables_and_greens" class="btn btn-outline-warning btn-lg">Vegetables and greens</a>
+    <a href="/Fruits_berries" class="btn btn-outline-info btn-lg">Fruits, berries</a>
+    <a href="/Cheese" class="btn btn-outline-light btn-lg">Cheese</a>
+    <a href="/Meat" class="btn btn-outline-dark btn-lg">Meat</a>
+    <a href="/Mayonnaise_ketchup_sauces_vinegar" class="btn btn-outline-secondary btn-lg">Mayonnaise, ketchup, sauces, vinegar</a>
+    <a href="/Fast_food" class="btn btn-outline-warning btn-lg">Fast food</a>
+  </p>
+<hr>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "mainApp/includes/main.html" %}
+
+{% block content %}
+<body>
+	<h1 align="center" style="color:#FAEBD7"><b>Log-in</b></h1>
+	<form method="post" class="form-group" style="color:#FAEBD7" align="center">
+		{% csrf_token %}
+		{{form}}
+		<button type='submit' class="btn btn-success">Log-In</button>
+		<p>Dont have account? Create now <a href="/register">Create</a></p>
+	</form>
+</body>
+
+{% endblock %}

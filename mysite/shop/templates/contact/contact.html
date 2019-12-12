@@ -1,0 +1,26 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+{% block content %}
+ <table>
+   <tr>
+    <td>
+      <p align="center"><img border="10" bordercolor="#FFFF00" width="100" heighth="25" src="{% static 'mainApp/image/telep.png' %}" class="img-thumbnail"></p><p align="center"><i style="color:#FAEBD7"><b>  &#9990;&nbsp; &nbsp;Mobile number: </b>87771186298</i></p>
+      <p align="center"><img border="10" bordercolor="#FFFF00" width="100" heighth="25" src="{% static 'mainApp/image/wpp.png' %}" class="img-thumbnail"></p><p align="center"><i style="color:#FAEBD7"><b>  &nbsp; &nbsp;Whatsapp: </b>87479075924</i></p>
+      <p align="center"><img border="10" bordercolor="#FFFF00" width="100" heighth="25" src="{% static 'mainApp/image/email.png' %}" class="img-thumbnail"></p><p align="center"><i style="color:#FAEBD7"><b>  &nbsp; &nbsp;E-mail.ru: </b>asem.nur1506@gmail.com</i></p>
+    </td><td></td>
+    <td>
+     <h2 align="center"><i style="color:#FAEBD7"><b> Address: </b></i></h2>
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9675.447547309477!2d76.8984822388083!3d43.229116393101194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2426740f56437e63!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDQuNC90YTQvtGA0LzQsNGG0LjQvtC90L3Ri9GFINGC0LXRhdC90L7Qu9C-0LPQuNC5!5e0!3m2!1sru!2skz!4v1573889947463!5m2!1sru!2skz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></td>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h2 align="center"><i style="color:#FAEBD7"><b> Weather: </b></i></h2>
+     <!-- weather widget start --><a target="_blank" href="https://www.booked.net/weather/almaty-10297">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://w.bookcdn.com/weather/picture/4_10297_1_1_1515e8_289_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=&anc_id=17999"  alt="booked.net"/></a><!-- weather widget end --></td>
+     <td>
+       <h2 align="center"><i style="color:#FAEBD7"><b> Clock: </b></i></h2>
+       <!-- clock widget start -->
+       <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","//s.bookcdn.com//css/cl/bw-cl-180x170r9.css"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> &nbsp;&nbsp;&nbsp;<div id="tw_19_1120469063"> &nbsp; <div style="width:120px; height:140px; margin: 0 auto;"><a href="https://www.booked.net/time/almaty-10297">Almaty</a><br/></div></div> <script type="text/javascript"> function setWidgetData_1120469063(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_1120469063 = -1; </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/time/info?ver=2&domid=&type=19&id=1120469063&scode=124&city_id=10297&wlangid=1&mode=2&details=0&background=ffffff&color=363636&add_background=ffffff&add_color=333333&head_color=ffffff&border=0&transparent=0"></script>
+       <!-- clock widget end -->
+{% endblock %}

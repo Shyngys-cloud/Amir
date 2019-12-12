@@ -1,0 +1,45 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+  {% if category %} {{ category.name }} {% else %} Product Page {% endif %}
+{% endblock %}
+{% block content %}
+<style>
+  .btt{
+    color: #F8CE48;
+  }
+  .img-style{
+    margin: 12px;
+  }
+</style>
+  <div id="sidebar" class="col-sm-12 center">
+    <h3 style="color:#FAEBD7">Categories</h3>
+    <ul>
+      <li {% if not category %} class="selected" {% endif %}>
+        <a href="{% url 'shop:ProductList' %}">All</a>
+      </li>
+      <ul class="nav nav-pills nav-justified">
+      {% for cat in categories %}
+        <li class="nav-item" {% if category.slug == cat.slug %} class="selected" {% endif %}>
+          <button type="button" class="btn btn-outline-warning"><a href="{{ cat.get_absolute_url }}" class="nav-link btt">{{ cat.name }}</a></button>
+        </li>
+      {% endfor %}
+      </ul>
+    </ul>
+  </div>
+  <div id="main" class="product_list col-sm-12" style="color:#FAEBD7">
+    <h1>{% if category %}{{ category.name }}{% else %}Goods{% endif %}</h1>
+    <div class="items row">
+      {% for product in products %}
+        <div class="item col-sm-4">
+          <a href="{{ product.get_absolute_url }}">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no-image.jpg'%}{% endif %}" class="img-responsive img-style">
+          </a>
+          <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+          {{ product.price }} tg.
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}</code>
+</pre>
